@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0C1F1B">
+<title>La Gracia de Dios · Punto de Venta</title>
+<meta name="description" content="Demo de un sistema POS para La Gracia de Dios, restaurante de comidas rápidas con sabor costeño en Cartagena de Indias.">
+<meta property="og:title" content="La Gracia de Dios · Punto de Venta (demo)">
+<meta property="og:description" content="Venta, cocina, pedidos, inventario, costeo, fidelización e indicadores en una sola demo.">
+<meta property="og:type" content="website">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app">
+  <aside class="side" aria-label="Navegación principal">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="6" fill="#fff"/><g stroke="#fff" stroke-width="2.4" stroke-linecap="round"><path d="M16 3v4M16 25v4M3 16h4M25 16h4M7 7l2.8 2.8M22.2 22.2L25 25M25 7l-2.8 2.8M9.8 22.2L7 25"/></g></svg>
+      </span>
+      <span class="brand-name">La Gracia<br>de Dios<small>Punto de venta</small></span>
+    </div>
+    <nav class="nav" id="nav"></nav>
+    <div class="side-foot">Demo con datos de ejemplo</div>
+  </aside>
+  <div class="main">
+    <header class="topbar">
+      <div class="tb-title">
+        <h1 id="title">Venta</h1>
+        <div class="sub">La Gracia de Dios · Cartagena de Indias</div>
+      </div>
+      <div class="sp"></div>
+      <button class="pill warn" id="lowpill" type="button" hidden></button>
+      <span class="pill hide-s"><span class="dot"></span><span id="clock" class="num">--:--</span></span>
+      <label class="role-wrap"><span class="sr">Rol del usuario</span>
+        <select class="role" id="role">
+          <option value="owner">👤 Propietario</option>
+          <option value="cajero">💵 Cajero</option>
+          <option value="cocina">👨‍🍳 Cocina</option>
+        </select>
+      </label>
+      <button class="icon-btn reset" id="reset" type="button" title="Reiniciar demo" aria-label="Reiniciar demo">
+        <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg>
+      </button>
+    </header>
+    <main class="view" id="view"></main>
+  </div>
+</div>
+<div id="modal-root"></div>
+<div id="toasts" role="status" aria-live="polite"></div>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
